@@ -9,6 +9,10 @@ CORS(app)  # Enable CORS for all routes
 
 wit_client = Wit("YXHDKJUMPW6DAQKFLU5REHMJGYCNCNAG")
 
+@app.route('/')
+def start():
+    return "api started"
+
 @app.route('/process_voice', methods=['POST'])
 def process_voice():
     # try:
